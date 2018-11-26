@@ -2,15 +2,13 @@ version: "3"
 
 services:
    vsi-site:
-      image: wordpress:fpm-alpine
+      image: wordpress:latest
       env_file:
          - ./.gitsecret/secrets/vsi-site.env
-      environment:
-         - MYSQL_HOST=mysql
       ports:
          - 8888:80
    mysql:
-      image: mysql:latest
+      image: mysql:5.7
       env_file:
          - ./.gitsecret/secrets/vsi-site.env
       ports:
