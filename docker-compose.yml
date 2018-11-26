@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+   vsi-site:
+      image: wordpress:fpm-alpine
+      env_file:
+         - ./.gitsecret/secrets/misquote-of-the-day.env
+      environment:
+         - MYSQL_HOST=mysql
+      ports:
+         - 8888:80
+   mysql:
+      image: mysql:latest
+      env_file:
+         - ./.gitsecret/secrets/misquote-of-the-day.env
+      ports:
+         - 33006:3306
