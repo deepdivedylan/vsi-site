@@ -20,4 +20,6 @@ wp-content/plugins/hello.php
 /readme.html
 /sitemap.xml
 /sitemap.xml.gz
-.gitsecret/keys/random_seed
+
+/.gitsecret/keys/random_seed
+/.gitsecret/secrets/vsi-site.env
