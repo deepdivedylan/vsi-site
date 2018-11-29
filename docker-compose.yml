@@ -3,12 +3,10 @@ version: "3"
 services:
    vsi-site:
       image: wordpress:latest
-      env_file:
-         - ./.gitsecret/secrets/vsi-site.env
       ports:
          - 8888:80
       volumes:
-         - ./php:/usr/local/etc/php/conf.d
+         - ./php/vsi-site.ini:/usr/local/etc/php/conf.d/vsi-site.ini
    mysql:
       image: mysql:5.7
       env_file:
