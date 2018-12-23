@@ -4,7 +4,7 @@ services:
    vsi-site:
       image: wordpress:latest
       environment:
-         - VIRTUAL_HOST=vsi.deepdivedylan.io
+         - VIRTUAL_HOST=vermilionseainstitute.org,www.vermilionseainstitute.org
       volumes:
          - ./php/vsi-site.ini:/usr/local/etc/php/conf.d/vsi-site.ini
          - ./volumes/html:/var/www/html
